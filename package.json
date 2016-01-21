@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/ElectronPOS/Electron-Boilerplate/issues"
   },
-  "homepage": "https://github.com/ElectronPOS/Electron-Boilerplate"
+  "homepage": "https://github.com/ElectronPOS/Electron-Boilerplate",
+  "devDependencies": {
+    "electron-prebuilt": "^0.36.4"
+  }
 }
