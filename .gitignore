@@ -184,6 +184,8 @@ ClientBin/
 *.pfx
 *.publishsettings
 node_modules/
+dist/
+build/
 orleans.codegen.cs
 
 # RIA/Silverlight projects
