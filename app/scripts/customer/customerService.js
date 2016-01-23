@@ -54,12 +54,12 @@
         
         function getCustomerById(id) {
             var deferred = $q.defer();
-            var query = "SELECT * FROM customers WHERE customer_id = ?";
+            var query = "SELECT * FROM customers WHERE customer_id = "+id;
             
             sql.connect(config).then(function() {
              // Query        
             var request = new sql.Request();
-            request.query(query, [id]).then(function(recordset) {               
+            request.query(query).then(function(recordset) {               
                  deferred.resolve(recordset);
             }).catch(function(err) {
                deferred.reject(err);
@@ -78,7 +78,7 @@
             sql.connect(config).then(function() {
              // Query        
             var request = new sql.Request();
-            request.query(query, [name]).then(function(recordset) {               
+            request.query(query).then(function(recordset) {               
                  deferred.resolve(recordset);
             }).catch(function(err) {
                deferred.reject(err);
@@ -112,11 +112,11 @@
         
         function deleteCustomer(id) {
             var deferred = $q.defer();
-            var query = "DELETE FROM customers WHERE customer_id = ?";
+            var query = "DELETE FROM customers WHERE customer_id = "+id;
              sql.connect(config).then(function() {
              // Query        
             var request = new sql.Request();
-            request.query(query, [id]).then(function(recordset) {               
+            request.query(query).then(function(recordset) {               
                  deferred.resolve(recordset);
             }).catch(function(err) {
                deferred.reject(err);
@@ -131,12 +131,12 @@
         
         function updateCustomer(customer) {
             var deferred = $q.defer();
-            var query = "UPDATE customers SET name = ? WHERE customer_id = ?";
+            var query = "UPDATE customers SET name = '"+customer.name+"' WHERE customer_id = "+customer.customer_id;
             
             sql.connect(config).then(function() {
              // Query        
             var request = new sql.Request();
-            request.query(query,  [customer.name, customer.customer_id]).then(function(recordset) {               
+            request.query(query).then(function(recordset) {               
                  deferred.resolve(recordset);
             }).catch(function(err) {
                deferred.reject(err);
