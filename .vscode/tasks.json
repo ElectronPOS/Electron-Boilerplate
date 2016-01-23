@@ -30,8 +30,15 @@
 
 {
  "version": "0.1.0",
- "command": "node_modules\\electron-prebuilt\\dist\\electron.exe",
-  "args": ["app"]
+ "command": "node_modules\\electron-prebuilt\\dist\\electron.exe", 
+  "args": ["app"], 
+  "tasks": [ 
+    { 
+      "taskName": "run", 
+      "args": [], 
+      "isBuildCommand": true 
+    } 
+  ] 
 }
 
 // A task runner that calls the Typescript compiler (tsc) and

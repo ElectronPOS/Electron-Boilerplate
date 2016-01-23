@@ -1,5 +1,9 @@
 {
- "name" : "Electron-Boilerplate",
- "version" : "0.1.0",
- "main" : "main.js"
+  "name": "Electron-Boilerplate",
+  "version": "0.1.0",
+  "main": "main.js",
+  "dependencies": {
+    "mongodb": "^2.1.4",
+    "mssql": "^3.0.0"
+  }
 }
